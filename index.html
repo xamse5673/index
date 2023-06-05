@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wepsite layout</title>
+    <style>
+        *{
+            box-sizing: border-box;
+
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 10px;
+            background: #f1f1f1;
+        }
+
+        /*header/blog tittle*/
+
+        .header{
+            padding: 30px;
+            text-align: center;
+            background: white;
+        }
+        .header h1{
+    font-size: 50px;
+}
+
+
+
+
+ul{
+    float: center;
+    display: flex;
+    background: black ;
+    align-items: center;
+}
+
+ul li{
+    list-style: none;
+    margin-left: 62px;
+    margin-top: 27px;
+    font-size: 14px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #d6d6d6;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.9s ease-in-out;
+    
+    
+}
+
+ul li a:hover{
+    background-color: #ddd;
+    color: black;
+}
+
+/*creat two unequal columns that float next two each other*/
+/*left colunm*/
+
+.leftcolumn{
+    float: left;
+    width: 75%;
+}
+
+/*right column*/
+
+.rightcolumn{
+    float: left;
+    width: 25%;
+    background: #f1f1f1;
+    padding-left: 20px;
+}
+
+/*fake image*/
+
+.fakeimg{
+    background-color: #aaa;
+    padding: 20px;
+    width: 100%;
+}
+/*add card effect for articles*/
+
+.card{
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/*clear floats after the coloumn*/
+
+.row::after{
+    content: "";
+    display: table;
+    clear: both;
+
+}
+
+/*footer*/
+
+.footer{
+    padding:20px ;
+    text-align: center ;
+    background: #ddd;
+    margin-top: 20px;
+}
+
+/*Responsive layout - when the screen is less than 800px wide,make the two colunms
+stack on the top of each other instead of next to each other*/
+
+
+@media  screen and ( max-width:800px ) {
+   .leftcolumn, .rightcolumn{
+    width: 100%;
+    padding: 0px;
+   }
+    
+} 
+
+/*Responsive layout - when the screen is less than 400px wide,make the navigation links
+stack on the top of each other instead of next to each other*/
+
+
+@media  screen and ( max-width:400px ) {
+   menu a{
+     width: 100%;
+    float: none;
+    }
+     
+ } 
+ img{
+    width: 350px;
+    height: 250px;
+ }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>WELCOME</h1>
+        <p>To My Wepsite That I Use To Veiw My Produts</p>
+    </div>
+    <div class="menu">
+        <ul>
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="service.html">SERVICE</a></li>
+            <li><a href="desing.html">DESIGN</a></li>
+            <li><a href="contect.html">CONTACT</a></li>
+        </ul>
+    </div>
+        <div class="row">
+            <div class="leftcolumn">
+                <div class="card">
+                    <h2>TITTLE HEADING</h2>
+                    <H5>tittle decoration,sep 2 ,2023</H5>
+                    <div class="fakeimg" style="height: 200px;">image</div>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem perferendis fugiat, <br>
+                         natus facilis autem officiis vitae pariatur, nisi atque ex soluta ullam quasi <br>
+                         saepe totam quod praesentium non eius provident.</p>
+
+                </div>
+                <div class="card">
+                    <H5>tittle decoration,sep 2 ,2023</H5>
+                    <div class="fakeimg" style="height: 200px;">image</div>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem perferendis fugiat, <br>
+                         natus facilis autem officiis vitae pariatur, nisi atque ex soluta ullam quasi <br>
+                         saepe totam quod praesentium non eius provident.</p>
+                </div>
+                 <div class="card">
+                    <H5>tittle decoration,sep 2 ,2023</H5>
+                    <div class="fakeimg" style="height: 200px;">image</div>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem perferendis fugiat, <br>
+                         natus facilis autem officiis vitae pariatur, nisi atque ex soluta ullam quasi <br>
+                         saepe totam quod praesentium non eius provident.</p>
+                </div>
+            </div>
+            <div class="rightcolumn">
+                <div class="card">
+                    <h2>Lorem, ipsum dolor.</h2>
+                    <div class="fakeimg" style="height: 100px;">iamge</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, in!</p>
+                </div>
+                <div class="card">
+                    <h2>Lorem, ipsum dolor.</h2>
+                    <div class="fakeimg" style="height: 100px;">iamge</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, in!</p>
+            </div>
+            <div class="card">
+                <h3>Lorem, ipsum.</h3>
+                <div class="fakeimg"><p>image</p></div>
+                <div class="fakeimg"><p>image</p></div>
+                <div class="fakeimg"><p>image</p></div>
+               
+            </div>
+            <div class="card">
+                <h3>Lorem, ipsum.</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+
+            </div>
+        </div>
+    </div><div class="footer">
+        <h2>the end</h2>
+    </div>
+</body>
+</html>
